@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N,i,numero;
+    scanf("%d",&N);
+    while(N>10000||N<-10000)
+    {
+        printf("erro\n");
+        scanf("%d",&N);
+    }
+    for(i=0;i<N;i++)
+    {
+        scanf("%d",&numero);
+        if(numero%2==0&&numero!=0)
+        {
+            printf("EVEN ");
+        }
+        if(numero%2!=0&&numero!=0)
+        {
+            printf("ODD ");
+        }
+        if(numero<0&&numero!=0)
+        {
+            printf("NEGATIVE\n");
+        }
+        if(numero>0&&numero!=0)
+        {
+            printf("POSITIVE\n");
+        }
+        if(numero==0)
+        {
+            printf("NULL\n");
+        }
+
+    }
+    return 0;
+}
