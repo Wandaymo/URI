@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int N=0,aux=0,horas=0,minutos=0,segundos=0;
+    scanf("%d",&N);
+    if(N>3600)
+    {
+        horas=N/3600;
+        aux=N%3600;
+        minutos=aux/60;
+        aux=aux%60;
+        segundos=aux;
+    }
+    else
+    {
+        minutos=N/60;
+        aux=N%60;
+        segundos=aux;
+    }
+    printf("%d:%d:%d\n",horas,minutos,segundos);
+    return 0;
+}
