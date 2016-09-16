@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float N;
+    int aux = 0;
+    scanf("%f",&N);
+
+    if(N >= 100)
+    {
+        aux = N / 100;
+        N = N-(aux*100);
+    }
+    printf("NOTAS:\n%d nota(s) de R$ 100.00\n",aux);
+    aux = 0;
+    if(N >= 50)
+    {
+        aux = N / 50;
+        N = N-(aux*50);
+    }
+    printf("%d nota(s) de R$ 50.00\n",aux);
+    aux = 0;
+    if(N >= 20)
+    {
+        aux = N / 20;
+        N = N-(aux*20);
+    }
+    printf("%d nota(s) de R$ 20.00\n",aux);
+    aux = 0;
+    if(N >= 10)
+    {
+        aux = N / 10;
+        N = N-(aux*10);
+    }
+    printf("%d nota(s) de R$ 10.00\n",aux);
+    aux = 0;
+    if(N >= 5)
+    {
+        aux = N / 5;
+        N = N-(aux* 5);
+    }
+    printf("%d nota(s) de R$ 5.00\n",aux);
+    aux = 0;
+    if(N >= 2)
+    {
+        aux = N / 2;
+        N = N-(aux* 2);
+    }
+    printf("%d nota(s) de R$ 2.00\nMOEDAS:\n",aux);
+    aux = 0;
+    if(N >= 1)
+    {
+        aux = N / 1;
+        N = N-(aux* 1);
+    }
+    printf("%d moeda(s) de R$ 1.00\n",aux);
+    aux = 0;
+    if(N >= 0.50)
+    {
+        aux = N / 0.5;
+        N = N-(aux* 0.5);
+    }
+    printf("%d moeda(s) de R$ 0.50\n",aux);
+    aux = 0;
+    if(N >= 0.25)
+    {
+        aux = N / 0.25;
+        N = N-(aux* 0.25);
+    }
+    printf("%d moeda(s) de R$ 0.25\n",aux);
+    aux = 0;
+    if(N >= 0.10)
+    {
+        aux = N / 0.10;
+        N = N-(aux* 0.10);
+    }
+    printf("%d moeda(s) de R$ 0.10\n",aux);
+    aux = 0;
+    if(N >= 0.05)
+    {
+        aux = N / 0.05;
+        N = N-(aux* 0.05);
+    }
+    printf("%d moeda(s) de R$ 0.05\n",aux);
+    printf("%.0f moeda(s) de R$ 0.01\n",N*100);
+    
+    return 0;
+}
