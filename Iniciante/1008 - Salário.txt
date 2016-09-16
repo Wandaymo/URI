@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+ int NF,HT;
+ float VPH;
+ scanf("%d",&NF);
+ scanf("%d",&HT);
+ scanf("%f",&VPH);
+ printf("NUMBER = %d\n",NF);
+ printf("SALARY = U$ %.2f\n",HT*VPH);
+    return 0;
+}
