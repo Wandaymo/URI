@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+ int CP, CP2, NP, NP2;
+ float VU,VU2;
+  scanf("%d%d%f",&CP,&NP,&VU);
+  scanf("%d%d%f",&CP2,&NP2,&VU2);
+ printf("VALOR A PAGAR: R$ %.2f\n",(NP * VU) + (NP2 * VU2));
+    return 0;
+}
