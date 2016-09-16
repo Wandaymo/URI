@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int horas,minutos,aux=0;
+
+    while (scanf("%d:%d",&horas,&minutos)!=EOF)
+    {
+
+
+    if(horas<7)
+    {
+        aux=0;
+    }
+    if(horas==7)
+    {
+        aux=minutos;
+    }
+    if(horas==8)
+    {
+        aux=60+minutos;
+    }
+    if(horas==9)
+    {
+        aux=120;
+    }
+    printf("Atraso maximo: %d\n",aux);
+    }
+
+    return 0;
+}
