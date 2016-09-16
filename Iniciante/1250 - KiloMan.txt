@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int n=0, t=0,t1[50],i,j,atingido=0;
+    char pulos[51];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        atingido=0;
+          scanf("%d",&t);
+            for(j=0;j<t;j++)
+            {
+                scanf("%d",&t1[j]);
+            }
+                scanf("%s",pulos);
+                 for(j=0;j<t;j++)
+            {
+                if((t1[j]<=2&&pulos[j]=='S') || (t1[j]>2&&pulos[j]=='J') )
+                {
+                     atingido++;
+                }
+            }
+         printf("%d\n",atingido);
+    }
+    return 0;
+}
