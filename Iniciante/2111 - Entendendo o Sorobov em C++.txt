@@ -1,0 +1,111 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+
+ll n;
+int matrix[12][12];
+string line;
+
+int main (int argc, char const* argv[])
+{
+    int r;
+    while ( getline(cin,line)  )
+    {
+
+        int d = 8;
+
+        for(int i=0; i <= 10; i++)
+        {
+            for(int j= 0; j <= 10; j++)
+            {
+              matrix[i][j] = 0;
+            }
+        }
+
+
+        for(int l = line.length() -1; l >= 0; l --)
+        {
+            r = line[l]-'0';
+
+            if(r == 0)
+            {
+                matrix[d][0] = 1;
+                for(int i=4; i <= 7; i++)
+                {
+                    matrix[d][i] = 1;
+                }
+
+                n/=10; //Variavel long long int;
+                d--;
+                continue;
+            }
+
+
+            matrix[d][0] = 1;
+            matrix[d][1] = 0;
+            if(r >= 5)
+            {
+                matrix[d][1] = 1;
+                matrix[d][0] = 0;
+                r-=5;
+            }
+            int p = 3;
+            int cnt = 0;
+            while(r)
+            {
+                matrix[d][p]=1;
+                p++;
+                r--;
+                cnt++;
+            }
+
+            for(int i = 8; cnt <= 4; cnt++, i--)
+            {
+                matrix[d][i]=1;
+
+            }
+
+
+            n/=10; 
+            d--;
+        }
+
+        while( d >= 0)
+        {
+            matrix[d][0] = 1;
+            for(int i=4; i <= 7; i++)
+            {
+               matrix[d][i] = 1;
+            }
+            n/=10;
+            d--;
+        }
+
+        for(int i=0; i <= 1; i++)
+        {
+            for(int d=0; d <= 8; d++)
+            {
+
+                printf("%d", matrix[d][i]);
+            }
+            printf("\n");
+        }
+        for(int i=0; i <= 8; i++)
+        {
+            printf("-");
+        }
+        printf("\n");
+        for(int i=3; i <= 7; i++)
+        {
+            for(int d=0; d <= 8; d++)
+            {
+                printf("%d", matrix[d][i]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}
