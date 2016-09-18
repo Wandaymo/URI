@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N, i;
+    float num1, num2, num3;
+    scanf("%d",&N);
+    float vetor[N];
+    for(i = 0; i < N; i++)
+    {
+        scanf("%f %f %f",&num1, &num2, &num3);
+        vetor[i] = ((num1 * 2) + (num2 * 3) + (num3 * 5)) / 10;
+    }
+    for(i = 0; i < N; i++)
+    {
+        printf("%.1f\n",vetor[i]);
+    }
+
+    return 0;
+}
