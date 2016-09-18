@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+    int dia, hora, minuto, segundo, diaF, horaF, minutoF, segundoF, resultado, aux;
+    char c[6];
+    scanf("%s%d",c,&dia);
+    scanf("%d : %d : %d",&hora, &minuto, &segundo);
+
+    scanf("%s%d",c,&diaF);
+    scanf("%d : %d : %d",&horaF, &minutoF, &segundoF);
+
+    resultado = ((diaF - dia) * 86400) + ((horaF - hora) * 3600) + ((minutoF - minuto) * 60) + (segundoF - segundo);
+
+
+       dia = resultado / 86400;
+       aux = resultado % 86400; 
+       hora = aux / 3600;
+       aux = aux % 3600; 
+       minuto = aux / 60;
+       aux = aux % 60; 
+       segundo = aux;
+
+       printf("%d dia(s)\n%d hora(s)\n%d minuto(s)\n%d segundo(s)\n",dia, hora, minuto, segundo);
+
+   return 0;
+
+}
