@@ -1,6 +1,3 @@
-Colocar bebidas separadas
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
