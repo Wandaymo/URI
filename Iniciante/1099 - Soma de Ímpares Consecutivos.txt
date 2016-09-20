@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N, X, Y, i, j, p = 0, soma = 0;
+    scanf("%d",&N);
+    int vetor[N];
+    for(i = 0; i < N; i++)
+    {
+        scanf("%d %d",&X, &Y);
+
+        if(X < Y || X == Y)
+        {
+
+            for(j = X + 1; j < Y; j++)
+            {
+                if(j %2 != 0)
+                {
+                    soma = soma + j;
+
+                }
+            }
+        }
+
+        else
+        {
+            for(j = Y + 1; j < X; j++)
+            {
+                if(j %2 != 0)
+                {
+                    soma = soma + j;
+                }
+            }
+        }
+
+        vetor[i] = soma;
+        soma = 0;
+
+    }
+
+    for(p = 0; p < N; p++)
+    {
+        printf("%d\n",vetor[p]);
+    }
+
+    return 0;
+}
