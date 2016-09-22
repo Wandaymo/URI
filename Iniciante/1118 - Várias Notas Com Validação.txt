@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+funcao()
+{
+    float x, i = 0, soma = 0;
+
+    while(i < 2)
+    {
+        scanf("%f",&x);
+
+        if(x < 0 || x > 10)
+            printf("nota invalida\n");
+        else
+        {
+            soma = soma + x;
+            i++;
+        }
+    }
+    printf("media = %.2f\n",soma / 2);
+}
+
+int main()
+{
+    int n = 1;
+
+        funcao();
+
+        while(n!= 2)
+        {
+          printf("novo calculo (1-sim 2-nao)\n");
+          scanf("%d",&n);
+          if(n == 1)
+               funcao();
+
+        }
+
+  return 0;
+}
