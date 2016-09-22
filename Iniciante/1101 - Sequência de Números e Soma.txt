@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N, M, i = 0, j, soma = 0;
+
+    while(scanf("%d %d",&M,&N),(M>0)&&(N>0))
+    {
+        if(M < N || M == N)
+        {
+            for(j = M; j <= N; j++)
+            {
+                soma = soma + j;
+                i++;
+
+            }
+            for(j = M; j<=N; j++)
+            {
+                printf("%d ",j);
+            }
+            printf("Sum=%d\n",soma);
+        }
+
+        else
+        {
+            for(j = N; j <= M; j++)
+            {
+                soma = soma + j;
+                i++;
+
+            }
+            for(j = N; j<=M; j++)
+            {
+                printf("%d ",j);
+            }
+            printf("Sum=%d\n",soma);
+        }
+
+        soma = 0;
+    }
+
+    return 0;
+}
