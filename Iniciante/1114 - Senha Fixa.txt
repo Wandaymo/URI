@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int X;
+
+    while(scanf("%d",&X),(X!=2002))
+    {
+
+            printf("Senha Invalida\n");
+
+    }
+    printf("Acesso Permitido\n");
+
+    return 0;
+}
