@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+JVInter = 0, JVGremio = 0, empate = 0;
+
+funcao()
+{
+    int inter, gremio;
+
+    scanf("%d %d",&inter,&gremio);
+
+    if(inter > gremio)
+        JVInter ++;
+    else if(gremio > inter)
+        JVGremio ++;
+    else if (inter == gremio)
+        empate ++;
+}
+
+
+
+int main()
+{
+    int n = 1, grenais = 1;
+
+    funcao();
+    while(n!= 2)
+    {
+        printf("Novo grenal (1-sim 2-nao)\n");
+        scanf("%d",&n);
+        if(n == 1)
+        {
+            grenais++;
+            funcao();
+
+        }
+
+    }
+    printf("%d grenais\n",grenais);
+    printf("Inter:%d\n",JVInter);
+    printf("Gremio:%d\n",JVGremio);
+    printf("Empates:%d\n",empate);
+    if(JVInter > JVGremio)
+        printf("Inter venceu mais\n");
+    else if(JVGremio > JVInter)
+        printf("Gremio venceu mais\n");
+
+    return 0;
+}
