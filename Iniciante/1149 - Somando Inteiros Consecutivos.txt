@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int i, A, N, soma = 0, j;
+    scanf("%d %d",&A, &N);
+    while(N <= 0)
+    {
+        scanf("%d",&N);
+    }
+    j = A;
+    for(i = 0; i < N ; i++)
+    {
+        soma = soma + j;
+        j++;
+    }
+    printf("%d\n",soma);
+    return 0;
+}
