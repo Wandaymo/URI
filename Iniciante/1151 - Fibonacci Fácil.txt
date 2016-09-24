@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int i = 0, N, soma = 0, proximo = 1;
+    scanf("%d",&N);
+    printf("0 ");
+
+    while(i < (N - 2))
+    {
+        soma = soma + proximo;
+        printf("%d ",soma);
+        proximo = soma - proximo;
+        i++;
+    }
+    soma = soma + proximo;
+    printf("%d\n",soma);
+
+    return 0;
+}
