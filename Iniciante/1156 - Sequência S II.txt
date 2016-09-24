@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float i = 1, soma = 0, j = 1;
+    while(j < 40)
+    {
+        soma = soma + (j / i);
+        i = i * 2;
+        j = j + 2;
+
+    }
+    printf("%.2f\n",soma);
+
+    return 0;
+}
