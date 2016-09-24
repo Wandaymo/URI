@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int i = 0, X, Z, soma = 0, j;
+    scanf("%d",&X);
+    scanf("%d",&Z);
+    while(X >= Z)
+    {
+        scanf("%d",&Z);
+    }
+    j = X;
+    while(soma < Z)
+    {
+        soma = soma + j;
+        j++;
+        i++;
+    }
+    printf("%d\n",i);
+
+    return 0;
+}
