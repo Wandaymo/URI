@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i = 1, N, M, j, k = 0 ;
+
+    scanf("%d",&M);
+
+    for(j = 0; j < M; j++)
+    {
+        scanf("%d",&N);
+
+
+        while(i <= N)
+        {
+
+            if(N%i == 0 )
+            {
+                k++;
+            }
+
+            i++;
+
+        }
+        if(k == 2)
+        {
+            printf("%d eh primo\n",N);
+        }
+        else if(k != 2)
+        {
+            printf("%d nao eh primo\n",N);
+        }
+        k = 0;
+        i = 1;
+
+    }
+
+
+
+
+    return 0;
+}
