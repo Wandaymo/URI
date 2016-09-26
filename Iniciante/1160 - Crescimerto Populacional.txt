@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i = 0, N, PA, PB, cont = 0;
+    float G1, G2;
+    scanf("%d",&N);
+    for(i = 0; i < N; i++)
+    {
+        scanf("%d %d %f %f",&PA, &PB, &G2, &G1);
+        while(PA <= PB)
+        {
+
+            PB = PB + ((PB * G1) / 100);
+
+            PA = PA + ((PA * G2) / 100);
+            cont++;
+            if(cont > 100)
+            {
+                break;
+            }
+        }
+        if(cont > 100)
+        {
+            printf("Mais de 1 seculo.\n");
+            cont = 0;
+        }
+        else if (cont <= 100)
+        {
+           printf("%d anos.\n",cont);
+           cont = 0;
+        }
+
+
+    }
+
+    return 0;
+}
