@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i = 1, N, X, Y, j, soma = 0, aux;
+    scanf("%d",&N);
+    for(i = 0; i < N ; i++)
+    {
+        scanf("%d %d",&X, &Y);
+
+        if(X%2 != 0)
+        {
+            aux = X;
+            for(j = 0  ; j < Y; j++)
+            {
+                soma = soma + aux;
+
+                aux = aux + 2;
+            }
+        }
+        else if(X%2 == 0)
+        {
+            aux = (X + 1);
+            for(j = 0  ; j < Y; j++)
+            {
+                soma = soma + aux;
+
+                aux = aux + 2;
+            }
+
+        }
+
+        printf("%d\n",soma);
+        soma = 0;
+
+    }
+    return 0;
+}
