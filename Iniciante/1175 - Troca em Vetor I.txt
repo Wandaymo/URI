@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, X[20], j = 19, aux;
+
+    for(i = 0; i < 20; i++)
+    {
+        scanf("%d",&X[i]);
+    }
+    for(i = 0; i < 10; i++)
+    {
+        aux = X[i];
+        X[i] = X[j];
+        X[j] = aux;
+        j--;
+    }
+    for(i = 0; i < 20; i++)
+    {
+        printf("N[%d] = %d\n",i,X[i]);
+    }
+
+    return 0;
+}
