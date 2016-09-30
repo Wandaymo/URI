@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int i = 1;
+    double vetor[100];
+
+    scanf("%lf",&vetor[0]);
+
+    while(i < 100)
+    {
+        vetor[i] = vetor[i - 1] / 2;
+        i++;
+
+    }
+
+    i = 0;
+
+    while(i < 100)
+    {
+        printf("N[%d] = %.4lf\n", i, vetor[i]);
+        i++;
+
+    }
+    return 0;
+}
