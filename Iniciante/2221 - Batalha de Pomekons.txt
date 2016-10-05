@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int T, i, Ai, Di, Li, Ai2, Di2, Li2 , j, bonus;
+
+    scanf("%d",&T);
+    for(i = 0; i < T; i++)
+    {
+        for(j = 0; j < 1; j++)
+        {
+            scanf("%d",&bonus);
+            scanf("%d %d %d",&Ai, &Di, &Li);
+            scanf("%d %d %d",&Ai2, &Di2, &Li2);
+
+            if(Li %2 == 0 && Li2 %2 == 0)
+            {
+                if((((Ai + Di) / 2 ) + bonus) > (((Ai2 + Di2) / 2 ) + bonus))
+                {
+                    printf("Dabriel\n");
+                }
+                else if((((Ai + Di) / 2 ) + bonus) < (((Ai2 + Di2) / 2 ) + bonus))
+                {
+                    printf("Guarte\n");
+                }
+                else if((((Ai + Di) / 2 ) + bonus) == (((Ai2 + Di2) / 2 ) + bonus))
+                {
+                    printf("Empate\n");
+                }
+            }
+            else if(Li %2 == 0 && Li2 %2 != 0)
+            {
+                if((((Ai + Di) / 2 ) + bonus) > ((Ai2 + Di2) / 2 ))
+                {
+                    printf("Dabriel\n");
+                }
+                else if((((Ai + Di) / 2 ) + bonus) < ((Ai2 + Di2) / 2 ))
+                {
+                    printf("Guarte\n");
+                }
+                else if((((Ai + Di) / 2 ) + bonus) == ((Ai2 + Di2) / 2 ))
+                {
+                printf("Empate\n");
+                }
+            }
+            else if(Li %2 != 0 && Li2 %2 == 0)
+            {
+                if(((Ai + Di) / 2 ) > (((Ai2 + Di2) / 2 ) + bonus))
+                {
+                    printf("Dabriel\n");
+                }
+                else if(((Ai + Di) / 2 )  < (((Ai2 + Di2) / 2 ) + bonus))
+                {
+                    printf("Guarte\n");
+                }
+                else if(((Ai + Di) / 2 ) == (((Ai2 + Di2) / 2 ) + bonus))
+                {
+                    printf("Empate\n");
+                }
+            }
+            else if(Li %2 != 0 && Li2 %2 != 0)
+            {
+                if(((Ai + Di) / 2 ) > ((Ai2 + Di2) / 2 ))
+                {
+                    printf("Dabriel\n");
+                }
+                else if(((Ai + Di) / 2 )  < ((Ai2 + Di2) / 2 ))
+                {
+                printf("Guarte\n");
+                }
+                else if(((Ai + Di) / 2 ) == ((Ai2 + Di2) / 2 ) )
+                {
+                printf("Empate\n");
+                }
+            }
+
+        }
+
+    }
+
+    return 0;
+}
