@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int N = 1, i, R, maria = 0, joao = 0;
+    while(N != 0)
+    {
+    scanf("%d",&N);
+    for(i = 0; i < N; i++)
+    {
+        scanf("%d",&R);
+        if(R == 0)
+        {
+            maria++;
+        }
+        if(R == 1)
+        {
+            joao++;
+        }
+    }
+        if(N != 0)
+        {
+          printf("Mary won %d times and John won %d times\n",maria, joao);
+          maria = 0; joao = 0;
+        }
+
+    }
+
+    return 0;
+}
