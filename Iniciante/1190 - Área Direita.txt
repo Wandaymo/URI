@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int  i , j, aux, aux2;
+    char C;
+    double M[12][12], soma = 0;
+
+    scanf("%c ",&C);
+
+    for(i = 0; i < 12; i++)
+    {
+        for(j = 0; j < 12; j++)
+        {
+
+            scanf("%lf",&M[i][j]);
+
+        }
+    }
+    i = 11;
+    j = 1;
+    aux = 11;
+    aux2 = 1;
+    while(i > 6)
+    {
+        while(j < aux)
+        {
+            soma = soma + M[j][i];
+            j++;
+        }
+        aux2++;
+        i--;
+        aux--;
+        j = aux2;
+    }
+
+    if(C == 'S')
+    {
+       printf("%.1lf\n",soma);
+    }
+
+    else if(C == 'M')
+    {
+        printf("%.1lf\n",soma / 30);
+    }
+
+
+    return 0;
+}
