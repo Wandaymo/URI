@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int  i , j, aux;
+    char C;
+    float M[12][12], soma = 0;
+
+    scanf("%c ",&C);
+
+    for(i = 0; i < 12; i++)
+    {
+        for(j = 0; j < 12; j++)
+        {
+
+            scanf("%f",&M[i][j]);
+        }
+    }
+    i = 1;
+    j = 11;
+    aux = 12;
+    while(i < 12)
+    {
+        while(j < aux)
+        {
+            soma = soma + M[i][j];
+            j++;
+        }
+        i++;
+        j = 12 - i;
+    }
+
+    if(C == 'S')
+    {
+       printf("%.1f\n",soma);
+    }
+
+    else if(C == 'M')
+    {
+        printf("%.1f\n",soma / 66);
+    }
+
+
+    return 0;
+}
+
+
