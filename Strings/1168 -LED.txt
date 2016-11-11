@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main() {
+    int n,i,r,l,nLeds = 0;
+    char a[1000];
+    
+    scanf("%d",&n);
+        
+    while(i < n)
+    {    
+            scanf("%s",&a);
+            l = strlen(a);
+            l=l-1;
+
+            for (l; l >=0; l--)
+                {
+                    r = a[l]-'0';
+                    if(r == 0)
+                    {
+                        nLeds = nLeds + 6;
+                    }
+                    else if(r == 1)
+                    {
+                        nLeds = nLeds + 2;
+                    }
+                    else if(r == 2)
+                    {
+                        nLeds = nLeds + 5;
+                    }
+                    else if(r == 3)
+                    {
+                        nLeds = nLeds + 5;
+                    }
+                    else if(r == 4)
+                    {
+                        nLeds = nLeds + 4;
+                    }
+                    else if(r == 5)
+                    {
+                        nLeds = nLeds + 5;
+                    }
+                    else if(r == 6)
+                    {
+                        nLeds = nLeds + 6;
+                    }
+                    else if(r == 7)
+                    {
+                        nLeds = nLeds + 3;
+                    }
+                    else if(r == 8)
+                    {
+                        nLeds = nLeds + 7;
+                    }
+                    else if(r == 9)
+                    {
+                        nLeds = nLeds + 6;
+                    }
+                }
+            printf("%d leds\n",nLeds);
+            nLeds = 0;
+        i++;    
+    }        
+    
+         
+    return 0;
+}
+
