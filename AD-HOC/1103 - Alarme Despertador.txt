@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main() {
+    int H1, M1, H2, M2, TI = 0, TF = 0;
+    
+        
+    while(scanf("%d%d%d%d",&H1,&M1,&H2,&M2), H1 != 0 || M1 != 0 || H2 != 0 || M2 !=0)
+    {   
+        TI = (H1 * 60) + M1;
+        TF = (H2 * 60) + M2;
+        
+        if(TI < TF)
+            printf("%d\n",TF - TI);
+        
+        else if(TI > TF)
+            printf("%d\n",(1440 - TI) + TF );
+        
+        else if(TI == TF)
+            printf("O\n");
+        
+    }        
+         
+    return 0;
+}
+
