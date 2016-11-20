@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    long long int M, P;
+
+    while(scanf("%lld%lld", &M, &P)!= EOF)
+    {
+        if(P > M)
+            printf("%lld\n", P - M);
+        else if(P < M)
+            printf("%lld\n", M - P);
+        else if(P == M)
+            printf("%lld\n", P - M);
+    }
+    return 0;
+}
+
