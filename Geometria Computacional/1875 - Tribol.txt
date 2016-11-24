@@ -1,0 +1,141 @@
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+/**
+ *
+ * @author Wandaymo
+ */
+public class Pedido extends JFrame implements ActionListener,ItemListener {
+    
+  
+    public JComboBox cbTipo;
+    public JComboBox cbTam;
+    public JComboBox cbQtSabores;
+    public JComboBox cbSabor1;
+    public JComboBox cbSabor2;
+    public JComboBox cbBorda;
+    public JComboBox cbCebola;
+    
+    public JLabel lbTipo;
+    public JLabel lbTam;
+    public JLabel lbQtSabores;
+    public JLabel lbSabor1;
+    public JLabel lbSabor2;
+    public JLabel lbBorda;
+    public JLabel lbCebola;
+    
+    
+    String[] tipo = {"Pizza", "Calzone"};
+    String[] tam = { "P", "M","G" };
+    String[] qtSabores = {"1","2"};
+    String[] sabor = {"Moda","Do Chefe","Catupiry","Calabresa","Strogonoff de frango","Strogonoff de carne","Palmito","Carne seca","Mussarela","Baiana", "Quatro queijos","Cinco queijos","Portuguesa","Bacon-milho","Frango com pequi","Peito de peru","Espanhola","Lombo","Franbacon","Crocante","Vegetariana","Presunto","Atum","Marguerita","Econômica"};
+    String[] borda = {"Catupiry","Cheddar","Chocolate","Presunto","Banana","Mussarela"};
+    String[] cebola = {"Sim","Sim, pouca","Sim, muita","Não"};
+    
+    JPanel pnDados;
+    
+    
+    
+    
+    
+    Pedido()
+    {
+        cbTipo = new JComboBox(tipo);
+        cbTam = new JComboBox(tam);
+        cbQtSabores = new JComboBox(qtSabores);
+        cbSabor1 = new JComboBox(sabor);
+        cbSabor2 = new JComboBox(sabor);
+        cbBorda = new JComboBox(borda);
+        cbCebola = new JComboBox(cebola);
+        
+        lbTipo = new JLabel("Selecione o tipo de produto");
+        lbTam = new JLabel("Selecione o tamanho");
+        lbQtSabores = new JLabel("Selecione a quantidade de sabores");
+        lbSabor1 = new JLabel("Sabor 1");
+        lbSabor2 = new JLabel("Sabor 2");
+        lbBorda = new JLabel("Selecione o sabor da borda");
+        lbCebola = new JLabel("Cebola");
+        
+        pnDados = new JPanel();
+        this.add(pnDados);
+        pnDados.setLayout(null);
+        
+        lbTipo.setFont( new Font(null, Font.BOLD, 16 ) );
+        lbTam.setFont( new Font(null, Font.BOLD, 16 ) );
+        lbQtSabores.setFont( new Font(null, Font.BOLD, 16 ) );
+        lbSabor1.setFont( new Font(null, Font.BOLD, 16 ) );
+        lbSabor2.setFont( new Font(null, Font.BOLD, 16 ) );
+        lbBorda.setFont( new Font(null, Font.BOLD, 16 ) );
+        lbCebola.setFont( new Font(null, Font.BOLD, 16 ) );
+        
+        
+        lbTipo.setBounds(20, 20, 220, 40);  cbTipo.setBounds(260, 25,100,32);
+        
+        lbTam.setBounds(400,20, 220, 40);     cbTam.setBounds(600, 25,70,32);
+        
+        lbQtSabores.setBounds(20,80, 280, 40);     cbQtSabores.setBounds(320, 85,50,32);
+        
+        lbSabor1.setBounds(400,80, 280, 40);     cbSabor1.setBounds(480, 85,150,32);
+        
+        lbSabor2.setBounds(650,80, 280, 40);     cbSabor2.setBounds(730, 85,150,32);
+        
+        lbBorda.setBounds(20,140, 280, 40);     cbBorda.setBounds(260, 145,130,32);
+        
+        lbCebola.setBounds(420,140, 280, 40);     cbCebola.setBounds(500, 145,90,32);
+        
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        
+       // pnDados.add(cbTipo); 
+        
+       pnDados.add(lbTipo);pnDados.add(cbTipo); 
+       pnDados.add(lbTam);pnDados.add(cbTam);
+       pnDados.add(lbQtSabores);pnDados.add(cbQtSabores);
+       pnDados.add(lbSabor1);pnDados.add(cbSabor1);
+       pnDados.add(lbSabor2);pnDados.add(cbSabor2);
+       pnDados.add(lbBorda);pnDados.add(cbBorda);
+       pnDados.add(lbCebola);pnDados.add(cbCebola);
+        
+        
+        
+        
+        
+        this.setSize(1000, 600);
+        this.setTitle("Pedido");
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.setLocationRelativeTo(this);
+        this.setVisible(true);
+    }
+
+   
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
