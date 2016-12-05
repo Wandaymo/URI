@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int m, v, n, i, time1 = 0, time2 = 0, saldoTime1 = 0, saldoTime2 = 0,golsCasaDoAdversarioTime1 = 0,
+            golsCasaDoAdversarioTime2 = 0,saldoTotalTime1 = 0, saldoTotalTime2 = 0;
+    scanf("%d",&n);
+    for(i = 0; i < n; i++){
+    
+    scanf("%d x %d",&m, &v); //Time 1 jogando em casa;
+        if(m > v){
+            time1 = 3;
+            saldoTime1 = m;
+            saldoTime2 = v;
+            golsCasaDoAdversarioTime2 = v;
+            
+        }
+        else if(m < v){
+            time2 = 3;
+            saldoTime1 = m;
+            saldoTime2 = v;
+            golsCasaDoAdversarioTime2 = v;
+        }
+        else if(m == v){
+            time1 = 1;
+            time2 = 1;
+            saldoTime1 = m;
+            saldoTime2 = v;
+            golsCasaDoAdversarioTime2 = v;
+        }
+            
+    scanf("%d x %d",&m, &v); //Time 2 jogando em casa;
+       if(m > v){
+            time2 = time2 + 3;
+            saldoTime2 = saldoTime2 + m;
+            saldoTime1 = saldoTime1 + v;
+            golsCasaDoAdversarioTime1 = golsCasaDoAdversarioTime1 + v;
+            
+        }
+        else if(m < v){
+            time1 = time1 + 3;
+            saldoTime1 = saldoTime1 + v;
+            saldoTime2 = saldoTime2 + m;
+            golsCasaDoAdversarioTime1 = golsCasaDoAdversarioTime1 + v;
+        }
+        else if(m == v){
+            time2 = time2 + 1;
+            time1 = time1 + 1;
+            saldoTime1 = saldoTime1 + v;
+            saldoTime2 = saldoTime2 + m;
+            golsCasaDoAdversarioTime1 = golsCasaDoAdversarioTime1 + v;
+        }
+    
+    saldoTotalTime1 = saldoTime1 - saldoTime2;
+    saldoTotalTime2 = saldoTime2 - saldoTime1;
+   
+    
+    if(time1 > time2)
+        printf("Time 1\n");
+    else if(time1 < time2)
+        printf("Time 2\n");
+    else if(time1 == time2){
+        if(saldoTotalTime1 > saldoTotalTime2){
+            printf("Time 1\n");
+           
+        }
+        else if(saldoTotalTime1 < saldoTotalTime2){
+            printf("Time 2\n");
+        }
+        else if (saldoTotalTime1 == saldoTotalTime2){
+            if(golsCasaDoAdversarioTime1 > golsCasaDoAdversarioTime2)
+                printf("Time 1\n");
+            else if(golsCasaDoAdversarioTime1 < golsCasaDoAdversarioTime2)
+                printf("Time 2\n");
+            else if(golsCasaDoAdversarioTime1 == golsCasaDoAdversarioTime2)
+                printf("Penaltis\n");
+        }
+     }
+    
+    time1 = 0, time2 = 0, saldoTime1 = 0, saldoTime2 = 0,
+    golsCasaDoAdversarioTime1 = 0, golsCasaDoAdversarioTime2 = 0,saldoTotalTime1 = 0, saldoTotalTime2 = 0;
+    
+    }
+        return 0;
+}
